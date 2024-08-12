@@ -1,0 +1,8 @@
+{
+    "items": [{
+        "id": 1,
+        "nome": "Item 1",
+        "description": "Descrição 01",
+        "photo": "http://placekitten.com/200/300"
+    }]
+}

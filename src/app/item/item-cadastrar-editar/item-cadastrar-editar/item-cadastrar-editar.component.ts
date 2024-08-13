@@ -25,14 +25,31 @@ export class ItemCadastrarEditarComponent implements OnInit {
     ) {}
 
     ngOnInit() {
-        this.item = this.activatedRoute.snapshot.data["item"];
+        const itemId = this.activatedRoute.snapshot.paramMap.get('id');
+        if (itemId) {
+          this.itemService.pesquisarPorId(itemId).subscribe({
+            next: (item) => {
+              this.item = item;
+              this.formGroup.patchValue(this.item);
+            },
+            error: (error) => {
+              console.error('Erro ao carregar item:', error);
+              this.matSnackBar.open('Erro ao carregar item', null, {
+                duration: 5000,
+                panelClass: 'red-snackbar',
+              });
+              this.router.navigate(['/itens']);
+            }
+          });
+        }
+    
         this.formGroup = this.formBuilder.group({
-            nome: ['', Validators.required],
-            description: ['', Validators.required],
-            imageUrl: ['', Validators.required]
+          id: [this.item?.id],
+          nome: [this.item?.nome || '', Validators.required],
+          description: [this.item?.description || '', Validators.required],
+          imageUrl: [this.item?.imageUrl || '', Validators.required],
         });
-        
-    }
+      }
 
     salvar() {
         if (this.item && this.item.id) {

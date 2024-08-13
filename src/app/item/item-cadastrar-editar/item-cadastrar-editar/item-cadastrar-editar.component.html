@@ -14,6 +14,9 @@
             <input matInput placeholder="URL da Imagem" formControlName="imageUrl" required autocomplete="off">
             <mat-error>Campo é obrigatório</mat-error>
         </mat-form-field>
+        <div *ngIf="formGroup.get('imageUrl').value">
+            <img [src]="formGroup.get('imageUrl').value" alt="Preview" style="width: 200px; height: auto;">
+        </div>
         <div class="linha-botoes">
             <button mat-raised-button color="primary" [disabled]="!formGroup.valid">Salvar</button>
             <button *ngIf="item && item.id" type="button" color="warn" mat-raised-button (click)="deletar()">Deletar</button>

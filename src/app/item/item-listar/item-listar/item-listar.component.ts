@@ -14,7 +14,7 @@ import { UntypedFormGroup, UntypedFormBuilder } from "@angular/forms";
     styleUrls: ["./item-listar.component.scss"],
 })
 export class ItemListarComponent implements OnInit {
-    colunasTabela = ["id", "nome"];
+    colunasTabela: string[] = ['id', 'nome', 'description', 'imageUrl'];
 
     page: Page<Item> = new Page([], 0);
     pageEvent: PageEvent;

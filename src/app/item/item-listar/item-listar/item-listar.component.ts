@@ -53,7 +53,7 @@ export class ItemListarComponent implements OnInit {
                 new PageRequest(
                     {
                         pageNumber: this.pageEvent ? this.pageEvent.pageIndex : 0,
-                        pageSize: this.pageEvent ? this.pageEvent.pageSize : 5,
+                        pageSize: this.pageEvent ? this.pageEvent.pageSize : 15,
                     },
                     {
                         property: this.sortEvent ? this.sortEvent.active : "id",

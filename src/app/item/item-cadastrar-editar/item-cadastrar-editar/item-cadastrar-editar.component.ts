@@ -27,9 +27,11 @@ export class ItemCadastrarEditarComponent implements OnInit {
     ngOnInit() {
         this.item = this.activatedRoute.snapshot.data["item"];
         this.formGroup = this.formBuilder.group({
-            id: [this.item && this.item.id ? this.item.id : null],
-            nome: [this.item && this.item.nome ? this.item.nome : "", Validators.required],
+            nome: ['', Validators.required],
+            description: ['', Validators.required],
+            imageUrl: ['', Validators.required]
         });
+        
     }
 
     salvar() {

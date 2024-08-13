@@ -1,10 +1,17 @@
-<mat-toolbar>{{(item && item.id)?'Editar Item':'Cadastrar Item'}}</mat-toolbar>
+<mat-toolbar>{{(item && item.id) ? 'Editar Item' : 'Cadastrar Item'}}</mat-toolbar>
 
 <div class="componente-container">
-    <form class="form-padrao" *ngIf="formGroup" [formGroup]="formGroup" (ngSubmit)="formGroup.valid && salvar()"
-        novalidate>
+    <form class="form-padrao" *ngIf="formGroup" [formGroup]="formGroup" (ngSubmit)="formGroup.valid && salvar()" novalidate>
         <mat-form-field>
-            <input matInput placeholder="Nome" formControlName="nome" required autocomplete="off">
+            <input matInput placeholder="Título" formControlName="nome" required autocomplete="off">
+            <mat-error>Campo é obrigatório</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <textarea matInput placeholder="Descrição" formControlName="description" required></textarea>
+            <mat-error>Campo é obrigatório</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="URL da Imagem" formControlName="imageUrl" required autocomplete="off">
             <mat-error>Campo é obrigatório</mat-error>
         </mat-form-field>
         <div class="linha-botoes">

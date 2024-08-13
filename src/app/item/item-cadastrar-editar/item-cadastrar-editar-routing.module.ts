@@ -4,17 +4,17 @@ import { ItemCadastrarEditarComponent } from "./item-cadastrar-editar/item-cadas
 import { ItemResolverService } from "./item-resolver.service";
 
 const routes: Routes = [
-    {
-        path: "",
-        component: ItemCadastrarEditarComponent,
-        resolve: {
-            item: ItemResolverService,
-        },
-    },
-];
-
-@NgModule({
+    { 
+      path: '', 
+      component: ItemCadastrarEditarComponent,
+      resolve: {
+        item: ItemResolverService
+      } 
+    }
+  ];
+  
+  @NgModule({
     imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule],
-})
-export class ItemCadastrarEditarRoutingModule {}
+    exports: [RouterModule]
+  })
+  export class ItemCadastrarEditarRoutingModule { }

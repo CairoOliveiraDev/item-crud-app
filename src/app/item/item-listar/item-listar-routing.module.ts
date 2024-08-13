@@ -4,7 +4,7 @@ import { ItemListarComponent } from './item-listar/item-listar.component';
 
 
 const routes: Routes = [
-    {path: "", component: ItemListarComponent}
+  { path: '', component: ItemListarComponent }
 ];
 
 @NgModule({

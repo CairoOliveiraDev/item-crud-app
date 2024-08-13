@@ -1,22 +1,21 @@
 {
-  "itens": [
-    {
-      "id": "0d41",
-      "nome": "ssada",
-      "description": "dasfsfsaf",
-      "imageUrl": "fasf"
-    },
-    {
-      "id": "5248",
-      "nome": "gatinho",
-      "description": "amo gatos",
-      "imageUrl": "https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2022/10/erik-jan-leusink-IbPxGLgJiMI-unsplash-scaled.jpg"
-    },
-    {
-      "id": "0237",
-      "nome": "duda",
-      "description": "joao",
-      "imageUrl": "sdfs"
-    }
-  ]
+    "itens": [{
+            "id": "0d41",
+            "nome": "ssada",
+            "description": "dasfsfsaf",
+            "imageUrl": "fasf"
+        },
+        {
+            "id": "5248",
+            "nome": "gatinho",
+            "description": "amo gatos",
+            "imageUrl": "https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2022/10/erik-jan-leusink-IbPxGLgJiMI-unsplash-scaled.jpg"
+        },
+        {
+            "id": "0237",
+            "nome": "duda",
+            "description": "joao",
+            "imageUrl": "sdfs"
+        }
+    ]
 }
